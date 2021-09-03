@@ -1,0 +1,66 @@
+@import './../../../styles.scss';
+
+#menu {
+  background: #132034;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  padding: 20px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+
+  
+
+  #menu_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 50px;
+    list-style: none;
+    font-size: 18px;
+    height: 100%;
+    overflow-y: auto;
+
+    li {
+      width: 100%;
+      height: 50px;
+      margin-bottom: 10px;
+
+      a {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #fff;
+        transition: .3s;
+
+        &.logout {
+          color: #ff003b;
+        }
+
+        i {
+          font-size: 22px;
+        }
+      }
+
+      &:hover {
+        a {
+          background: #2B3647;
+        }
+      }
+
+      &.active {
+        a {
+          background: #2B3647;
+        }
+      }
+    }
+  }
+  
+}

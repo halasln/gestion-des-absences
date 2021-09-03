@@ -1,0 +1,15 @@
+<div id="left_section">
+
+  <app-admin-menu></app-admin-menu>
+
+</div>
+
+<div id="right_section" *ngIf="adminStatus">
+
+  <div class="header">
+    <h1>Requests</h1>
+  </div>
+  
+  <router-outlet></router-outlet>
+
+</div>

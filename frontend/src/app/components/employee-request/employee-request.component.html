@@ -1,0 +1,13 @@
+<textarea  #message></textarea>
+
+
+<div class="controls">
+
+  <div class="dates">
+    <input type="date" #fromDate>
+    <input type="date" #toDate>
+  </div>
+
+  <button (click)="onClick(message.value, fromDate.value, toDate.value)" >Submit Request</button>
+
+</div>

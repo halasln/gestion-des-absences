@@ -1,0 +1,11 @@
+@import './../../../styles.scss';
+
+.form-login{
+  @include flex-center-center;
+  @include flex-col;
+  gap: 20px;
+
+  button{
+    width: 100%;
+  }
+}

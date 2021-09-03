@@ -1,0 +1,35 @@
+<div id="edit-user">
+
+  <button class="close-btn" (click)="closeModel()">
+    <i class="fal fa-times"></i>
+    Close
+  </button>
+
+  <div class="form-body">
+
+    <div class="employee-img" [ngStyle]="{'background-image': 'url('+ employeeImg +')'}">
+      <i class="fal fa-camera"></i>
+      <input type="file" (change)='showImg($event)' #employeeImage>
+    </div>
+    <input [(ngModel)]="email" type="email" placeholder="Email">
+    <input [(ngModel)]="mobile" type="tel" placeholder="Mobile">
+    <input [(ngModel)]="password" type="text" placeholder="Password">
+    <p class="rdays"><span>Remaining Days: </span> <b>{{rdays}}</b></p>
+
+    <div class="actions">
+
+      <button (click)="editUser(employeeImage)">
+        <i class="fal fa-check"></i>
+        Save Edits
+      </button>
+      
+      <button (click)="closeModel()">
+        <i class="fal fa-times"></i>
+        Cancel
+      </button>
+
+    </div>
+
+  </div>
+
+</div>

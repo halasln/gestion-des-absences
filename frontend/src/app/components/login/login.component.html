@@ -1,0 +1,5 @@
+<div class="form-login">
+  <input type="email" placeholder="Email" #email (keydown.enter)="login(email.value, password.value)">
+  <input type="password" placeholder="Password" #password (keydown.enter)="login(email.value, password.value)">
+  <button (click)="login(email.value, password.value)">Log In</button>
+</div>

@@ -1,0 +1,35 @@
+<div id="menu" *ngIf="employeeStatus">
+
+  <app-user></app-user>
+
+  <ul id="menu_list">
+    <div>
+
+      <li mat-menu-item routerLink="employee" routerLinkActive="active">
+        <a href="./employee">
+          <i class="fal fa-file-spreadsheet"></i>
+          Requests
+        </a>
+      </li>
+
+      <li mat-menu-item routerLink="p-requests" routerLinkActive="active">
+        <a href="./p-requests">
+          <i class="fal fa-file-spreadsheet"></i>
+          Previous Requests
+        </a>
+      </li>
+
+
+    </div>
+
+   <div>
+    <li (click)="logout()">
+      <a href="" class="logout">
+        <i class="fal fa-power-off"></i>
+        Log Out
+      </a>
+    </li>
+   </div>
+  </ul>
+
+</div>

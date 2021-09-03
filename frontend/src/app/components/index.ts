@@ -1,0 +1,12 @@
+export { AddEmployeeComponent } from './add-employee/add-employee.component';
+export { AdminMenuComponent } from './admin-menu/admin-menu.component';
+export { AdminPageComponent } from './admin-page/admin-page.component';
+export { EmployeeComponent } from './employee/employee.component';
+export { EmployeeMenuComponent } from './employee-menu/employee-menu.component';
+export { EmployeePageComponent } from './employee-page/employee-page.component';
+export { EmployeeRequestComponent } from './employee-request/employee-request.component';
+export { EmployeeRequestsComponent } from './employee-requests/employee-requests.component';
+export { FinishedRequestsComponent } from './finished-requests/finished-requests.component';
+export { LoginComponent } from './login/login.component';
+export { RequestsComponent } from './requests/requests.component';
+export { UserComponent } from './user/user.component';

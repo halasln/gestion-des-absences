@@ -1,0 +1,11 @@
+<div id="left_section">
+
+  <app-employee-menu></app-employee-menu>
+
+</div>
+
+<div id="right_section" *ngIf="employeeStatus">
+
+  <router-outlet></router-outlet>
+  
+</div>

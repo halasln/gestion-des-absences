@@ -1,0 +1,45 @@
+<div class="controls">
+  <div class="left-controls">
+    <input type="text" id="search">
+
+  </div>
+  <button (click)='showEmployeeForm()'>
+    <i class="fal fa-plus-circle"></i>
+    Add Employee
+  </button>
+
+</div>
+
+<div class="requests-body">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Mobile</th>
+        <th>Password</th>
+        <th>Position</th>
+        <th>Days</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let request of requests">
+        <td>
+          <img [src]="request.image" alt="">
+          <p class="user-data">
+            <span>{{ request.first_name }} {{ request.last_name }}</span>
+            <span>{{ request.email }}</span>
+          </p>
+        </td>
+        <td>{{ request.mobile }}</td>
+        <td>{{ request.password }}</td>
+        <td>{{ request.position }}</td>
+        <td>{{ request.days }}</td>
+
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+<app-add-employee *ngIf='addEmployeeModel' (closeBtnClicked)='closeAddEmployee()'></app-add-employee>

@@ -1,0 +1,39 @@
+<div id="add-employee">
+
+  <button class="close-btn" (click)="closeModel()">
+    <i class="fal fa-times"></i>
+    Close
+  </button>
+
+  <div class="form-body">
+
+    <div class="employee-img" [ngStyle]="{'background-image': 'url('+ employeeImg +')'}">
+      <i class="fal fa-camera"></i>
+      <input type="file" (change)='showImg($event)' #employeeImage>
+    </div>
+    <input type="text" placeholder="First name" #firstName>
+    <input type="text" placeholder="Last name" #lastName>
+    <input type="email" placeholder="Email" #email>
+    <input type="tel" placeholder="Mobile" #mobile>
+    <input type="text" placeholder="Position" #position>
+    <input type="text" placeholder="Address" #address>
+    <input type="number" placeholder="Vecation days" #vDays>
+    <input type="text" placeholder="Password" #password>
+
+    <div class="actions">
+
+      <button (click)="addEmployee(firstName.value, lastName.value, email.value, mobile.value, address.value, vDays.value, password.value, position.value)">
+        <i class="fal fa-check"></i>
+        Add Employee
+      </button>
+      
+      <button>
+        <i class="fal fa-times"></i>
+        Cancel
+      </button>
+
+    </div>
+
+  </div>
+
+</div>

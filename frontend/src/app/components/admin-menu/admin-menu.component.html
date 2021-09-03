@@ -1,0 +1,37 @@
+<div id="menu">
+
+  <app-user></app-user>
+
+  <ul id="menu_list">
+    <div>
+      <li mat-menu-item routerLink="requests" routerLinkActive="active">
+        <a>
+          <i class="fal fa-file-spreadsheet"></i>
+          Requests
+        </a>
+      </li>
+      <li mat-menu-item routerLink="finished-requests" routerLinkActive="active">
+        <a>
+          <i class="fal fa-file-check"></i>
+          Finished Requests
+        </a>
+      </li>
+      <li mat-menu-item routerLink="employees" routerLinkActive="active">
+        <a>
+          <i class="fal fa-users"></i>
+          Employees
+        </a>
+      </li>
+    </div>
+
+   <div>
+    <li (click)='logout()'>
+      <a href="" class="logout">
+        <i class="fal fa-power-off"></i>
+        Log Out
+      </a>
+    </li>
+   </div>
+  </ul>
+
+</div>

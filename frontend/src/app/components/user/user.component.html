@@ -1,0 +1,13 @@
+<div id="user">
+  <img [src]="userImg" alt="">
+
+  <div class="user-data">
+    <p class="name">{{ userName }}</p>
+    <p class="position">{{ userPosition }}</p>
+  </div>
+
+  <i class="far fa-cog" (click)='showEditUser()'></i>
+
+</div>
+
+<app-edit-user *ngIf='editUser' (closeBtnClicked)='closeEditUser()'></app-edit-user>

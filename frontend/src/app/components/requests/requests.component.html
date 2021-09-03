@@ -1,0 +1,47 @@
+<div class="controls">
+  <div class="left-controls">
+    <input type="text" id="search">
+
+  </div>
+</div>
+
+<div class="requests-body">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Vecation Days</th>
+        <th>Remaining Days</th>
+        <th>Reason</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let request of requests">
+        <td>
+          <img [src]="request.image" alt="">
+          <p class="user-data">
+            <span>{{ request.first_name }} {{ request.last_name }}</span>
+            <span>{{ request.email }}</span>
+          </p>
+        </td>
+        <td>{{ request.from_date }}</td>
+        <td>{{ request.to_date }}</td>
+        <td>{{ diffDates(request.from_date, request.to_date) }}</td>
+        <td>{{ request.r_days }}</td>
+        <td [title]="request.message">
+          {{ request.message }}
+        </td>
+        <td>
+          <button (click)="requestAction(request.user_id, request.id, 1, request.from_date, request.to_date, request.days)" ><i class="far fa-check"></i></button>
+          <button (click)="requestAction(request.user_id, request.id, 2, request.from_date, request.to_date, request.days)" ><i class="far fa-times"></i></button>
+        </td>
+
+      </tr>
+
+    </tbody>
+  </table>
+</div>
